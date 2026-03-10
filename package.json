@@ -3,13 +3,17 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "mocha \"tests/**/*.test.js\""
-  },
+    "test": "mocha \"tests/**/*.test.js\"",
+    "lint": "eslint .",
+    "format": "prettier ."
+},
   "author": "",
   "license": "ISC",
   "description": "",
   "devDependencies": {
-    "mocha": "^11.7.5"
+    "eslint": "^10.0.3",
+    "mocha": "^11.7.5",
+    "prettier": "^3.8.1"
   },
   "dependencies": {
     "chai": "^6.2.2"
