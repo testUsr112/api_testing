@@ -5,7 +5,8 @@
   "scripts": {
     "test": "mocha \"tests/**/*.test.js\"",
     "lint": "eslint .",
-    "format": "prettier ."
+    "format:check": "prettier . --check",
+    "format:write": "prettier . --write"
 },
   "author": "",
   "license": "ISC",
