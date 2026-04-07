@@ -1,22 +1,27 @@
-import { expect } from 'chai';
-import { ApiClient } from '../clients/bookingClient.js';
+import { expect } from 'chai'
+import { ApiClient } from '../clients/bookingClient.js'
 
 describe('Create booking', () => {
-    const client = new ApiClient();
+    const client = new ApiClient()
     const bookingInformation = {
-        'firstname': 'Jim',
-        'lastname': 'Brown',
-        'totalprice': 111,
-        'depositpaid': true,
-        'bookingdates': {
-            'checkin': '2018-01-01',
-            'checkout': '2019-01-01'
+        firstname: 'Jim',
+        lastname: 'Brown',
+        totalprice: 111,
+        depositpaid: true,
+        bookingdates: {
+            checkin: '2018-01-01',
+            checkout: '2019-01-01',
         },
-        'additionalneeds': 'Breakfast'
-    };
+        additionalneeds: 'Breakfast',
+    }
     it('should create a booking', async () => {
-        const response = await client.createBooking(bookingInformation);
-        expect(response.status).to.equal(200);
-        expect(response.headers.get('content-type')).to.include('application/json');
-    });
-});
+        const response =
+            await client.createBooking(
+                bookingInformation
+            )
+        expect(response.status).to.equal(200)
+        expect(
+            response.headers.get('content-type')
+        ).to.include('application/json')
+    })
+})
