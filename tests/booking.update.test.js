@@ -5,7 +5,7 @@ describe('Update booking', () => {
     const client = new ApiClient();
     let bookingId;
     before(async () => {
-        let bookingInformation = {
+        const bookingInformation = {
             'firstname': 'Jim',
             'lastname': 'Brown',
             'totalprice': 111,
@@ -16,12 +16,12 @@ describe('Update booking', () => {
             },
             'additionalneeds': 'Breakfast'
         };
-        let response = await client.createBooking(bookingInformation);
+        const response = await client.createBooking(bookingInformation);
         const data = await response.json();
         bookingId = data.bookingid;
     });
     it('should update booking', async () => {
-        let updatedBbookingInformation = {
+        const updatedBbookingInformation = {
             'firstname': 'Tom',
             'lastname': 'Black',
             'totalprice': 222,

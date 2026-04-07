@@ -5,7 +5,7 @@ describe('Get booking by id', () => {
     const client = new ApiClient();
     let bookingId;
     before(async () => {
-        let bookingInformation = {
+        const bookingInformation = {
             'firstname': 'Jim',
             'lastname': 'Brown',
             'totalprice': 111,
@@ -16,7 +16,7 @@ describe('Get booking by id', () => {
             },
             'additionalneeds': 'Breakfast'
         };
-        let response = await client.createBooking(bookingInformation);
+        const response = await client.createBooking(bookingInformation);
         const data = await response.json();
         bookingId = data.bookingid;
     });

@@ -29,7 +29,7 @@ export class ApiClient {
 			},
 			body: JSON.stringify(body),
 		});
-		let data = await response.json();
+		const data = await response.json();
 		this.token = data.token;
 		return this.token;
 	}

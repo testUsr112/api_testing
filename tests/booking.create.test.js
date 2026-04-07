@@ -3,7 +3,7 @@ import { ApiClient } from '../clients/bookingClient.js';
 
 describe('Create booking', () => {
     const client = new ApiClient();
-    let bookingInformation = {
+    const bookingInformation = {
         'firstname': 'Jim',
         'lastname': 'Brown',
         'totalprice': 111,
