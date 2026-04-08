@@ -19,6 +19,12 @@ pipeline {
                 bat 'call npm run format:check'
             }
         }
+
+        stage('Run tests') {
+            steps {
+                bat 'call npm test'
+            }
+        }
     }
 
     post {
@@ -29,7 +35,10 @@ pipeline {
             echo 'Lint pipeline failed.'
         }
         always {
-            echo 'Pipeline finished.'
+            always {
+                archiveArtifacts artifacts: 'reports/**/*', allowEmptyArchive: true
+                echo 'Pipeline finished.'
+            }
         }
     }
 }

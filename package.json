@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "mocha \"tests/**/*.test.js\"",
+    //"test": "mocha \"tests/**/*.test.js\"",
+    "test": "mocha \"tests/**/*.test.js\" --reporter mochawesome --reporter-options reportDir=reports/html",
     "lint": "eslint .",
     "format:check": "prettier . --check",
     "format:write": "prettier . --write"
@@ -14,6 +15,7 @@
   "devDependencies": {
     "eslint": "^10.0.3",
     "mocha": "^11.3.0",
+    "mochawesome": "^7.1.4",
     "prettier": "^3.8.1"
   },
   "dependencies": {
