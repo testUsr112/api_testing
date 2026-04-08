@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "mocha \"tests/**/*.test.js\" --reporter mochawesome --reporter-options reportDir=reports/html",
+    "test": "mocha \"tests/**/*.test.js\" --reporter mochawesome --reporter-options reportDir=reports/html,reportFilename=report,inline=true",
     "lint": "eslint .",
     "format:check": "prettier . --check",
     "format:write": "prettier . --write"
