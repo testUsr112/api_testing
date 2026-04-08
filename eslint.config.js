@@ -15,6 +15,6 @@ export default [
             'no-var': 'error',
             'prefer-const': 'error',
         },
-        ignores: ['reports/**']
+        ignores: ['reports/**'],
     },
 ]
